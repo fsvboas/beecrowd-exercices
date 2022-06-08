@@ -6,7 +6,7 @@ const resolution = (lines) => {
 
   const adaptParams = () => {
     const [a, b, c] = lines.map(parseFloat);
-    console.log(a, b, c);
+    // console.log(a, b, c);
     return { a, b, c };
   };
 
