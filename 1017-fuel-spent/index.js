@@ -1,21 +1,22 @@
 var input = "10 85";
 var lines = input.split(" ");
 
-const resolution = (lines) => {
-  const adaptParams = () => {
-    const [spentTime, averageSpeed] = lines.map(parseFloat);
-    return { spentTime, averageSpeed };
-  };
-
-  const { spentTime, averageSpeed } = adaptParams();
-  const carKmPerLiters = 12;
-
-  const calc = () => {
-    const totalTraveled = spentTime * averageSpeed;
-    const totalSpentFuel = totalTraveled / carKmPerLiters;
-    return totalSpentFuel;
-  };
-
-  console.log(calc().toFixed(3));
+const adaptParams = () => {
+  const [spentTime, averageSpeed] = lines.map(parseFloat);
+  return { spentTime, averageSpeed };
 };
-resolution(lines);
+
+const calc = (spentTime, averageSpeed) => {
+  const totalTraveled = spentTime * averageSpeed;
+  const totalSpentFuel = totalTraveled / 12;
+  return totalSpentFuel;
+};
+
+const resolution = () => {
+  const { spentTime, averageSpeed } = adaptParams();
+
+  const calcResult = calc(spentTime, averageSpeed).toFixed(3);
+
+  return calcResult;
+};
+console.log(resolution());
