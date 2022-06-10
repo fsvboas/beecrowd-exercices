@@ -2,7 +2,7 @@ var input = "556";
 var lines = input.split(" ");
 
 const adaptParams = () => {
-  let [seconds] = lines.map(parseInt);
+  const [seconds] = lines.map(parseInt);
   return { seconds };
 };
 

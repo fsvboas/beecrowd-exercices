@@ -2,7 +2,7 @@ var input = "576";
 var lines = input.split(" ");
 
 const adaptParams = () => {
-  let [moneyValue] = lines.map(parseInt);
+  const [moneyValue] = lines.map(parseInt);
   return { moneyValue };
 };
 
