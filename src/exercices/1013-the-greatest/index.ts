@@ -1,7 +1,9 @@
-var input = "7 14 106";
-var lines = input.split(" ");
+import { Input } from "../../types";
 
-const resolution = (lines) => {
+const input: Input = "7 14 106";
+const lines = input.split(" ");
+
+const resolution = (lines: string[]) => {
   const adaptParams = () => {
     const [a, b, c] = lines.map(Number);
     // console.log(a, b, c);

@@ -1,18 +1,21 @@
-var input = "400";
-var lines = input.split(" ");
+import { Input } from "../../types";
 
-const adaptParams = () => {
-  const [days] = lines.map(parseInt);
-  return { days };
+const input: Input = "400";
+const lines = input.split(" ");
+
+const adaptParams = (): number[] => {
+  return lines.map((item) => {
+    return Number(item);
+  });
 };
 
 const calc = () => {
-  let { days } = adaptParams();
+  let [days] = adaptParams();
 
-  const calcYears = parseInt(days / 365);
+  const calcYears = Math.floor(days / 365);
   days %= 365;
 
-  const calcMonths = parseInt(days / 30);
+  const calcMonths = Math.floor(days / 30);
   const totalRemainder = days % 30;
 
   return { calcYears, calcMonths, totalRemainder };

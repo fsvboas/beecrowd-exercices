@@ -1,7 +1,9 @@
-var input = "500 35.0";
-var lines = input.split(" ");
+import { Input } from "../../types";
 
-const resolution = (lines) => {
+const input: Input = "500 35.0";
+const lines = input.split(" ");
+
+const resolution = (lines: string[]) => {
   const adaptParams = () => {
     const [x, y] = lines.map(parseFloat);
     // console.log(x, y);

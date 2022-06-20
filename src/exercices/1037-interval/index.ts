@@ -1,13 +1,16 @@
-var input = "25.01";
-var lines = input.split(" ");
+import { Input } from "../../types";
 
-const adaptParams = () => {
-  const [inputNumber] = lines.map(parseFloat);
-  return { inputNumber };
+const input: Input = "25.01";
+const lines = input.split(" ");
+
+const adaptParams = (): number[] => {
+  return lines.map((item) => {
+    return Number(item);
+  });
 };
 
 const resolution = () => {
-  const { inputNumber } = adaptParams();
+  const [inputNumber] = adaptParams();
 
   if (inputNumber >= 0 && inputNumber <= 25) {
     return console.log("Intervalo [0,25]");

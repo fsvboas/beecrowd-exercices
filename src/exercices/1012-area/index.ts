@@ -1,7 +1,9 @@
-var input = "3.0 4.0 5.2";
-var lines = input.split(" ");
+import { Input } from "../../types";
 
-const resolution = (lines) => {
+const input: Input = "3.0 4.0 5.2";
+const lines = input.split(" ");
+
+const resolution = (lines: string[]) => {
   const pi = 3.14159;
 
   const adaptParams = () => {
