@@ -3,3 +3,6 @@
 
 # package-lock
 *lock.json
+
+# dist
+/dist
